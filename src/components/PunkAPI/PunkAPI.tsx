@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useFetch } from "@/hooks";
-import { PunkAPIForm } from "@/components";
+import { PunkAPIForm, PunkAPIDisplay } from "@/components";
 
 const PunkAPI = () => {
   const [pageNumber, setPageNumber] = useState("1");

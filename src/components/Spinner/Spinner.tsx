@@ -1,3 +1,3 @@
-const Spinner = () => null;
+const Spinner = () => <p>Spinner</p>;
 
 export default Spinner;

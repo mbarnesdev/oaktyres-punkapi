@@ -7,6 +7,7 @@ const PunkAPIFormSchema = z.object({
   pageNumberField: z.string().min(1),
   resultsPerPageField: z.string().min(1),
 });
+
 type TPunkAPIFormSchema = z.infer<typeof PunkAPIFormSchema>;
 
 interface IPunkAPIFormProps {
@@ -44,6 +45,7 @@ const PunkAPIForm: FunctionComponent<IPunkAPIFormProps> = ({
         defaultValue={resultsPerPage}
         {...register("resultsPerPageField")}
       />
+      <button>Submit!</button>
     </form>
   );
 };
