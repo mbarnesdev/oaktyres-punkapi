@@ -16,7 +16,9 @@ const PunkAPICard: FunctionComponent<IPunkAPICardProps> = ({
     <div className="punk-api-card-container">
       <h5 className="punk-api-card-container__name">{name}</h5>
       <p className="punk-api-card-container__tagline">{tagline}</p>
-      <img className="punk-api-card-container__image" src={image_url} />
+      <div className="punk-api-card-container__image-container">
+        <img className="punk-api-card-container__image" src={image_url} />
+      </div>
     </div>
   );
 };
