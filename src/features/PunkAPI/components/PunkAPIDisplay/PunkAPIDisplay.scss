@@ -1,0 +1,13 @@
+.display-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  text-align: center;
+  margin-top: 2rem;
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    padding-inline: 10rem;
+  }
+}

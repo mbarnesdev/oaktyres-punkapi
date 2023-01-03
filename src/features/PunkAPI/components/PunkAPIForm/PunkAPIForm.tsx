@@ -1,14 +1,5 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { FunctionComponent } from "react";
-
-const PunkAPIFormSchema = z.object({
-  pageNumberField: z.string().min(1),
-  resultsPerPageField: z.string().min(1),
-});
-
-type TPunkAPIFormSchema = z.infer<typeof PunkAPIFormSchema>;
+import type { FunctionComponent, ChangeEvent } from "react";
+import "./PunkAPIForm.scss";
 
 interface IPunkAPIFormProps {
   pageNumber: string;
@@ -23,30 +14,26 @@ const PunkAPIForm: FunctionComponent<IPunkAPIFormProps> = ({
   resultsPerPage,
   setResultsPerPage,
 }) => {
-  const { register, handleSubmit } = useForm<TPunkAPIFormSchema>({
-    resolver: zodResolver(PunkAPIFormSchema),
-  });
-
-  const onPunkAPIFormSubmit = (data: TPunkAPIFormSchema) => {
-    const { pageNumberField, resultsPerPageField } = data;
-    setPageNumber(pageNumberField);
-    setResultsPerPage(resultsPerPageField);
-  };
+  const handleChangePageNumber = (event: ChangeEvent<HTMLInputElement>) =>
+    setPageNumber(event.currentTarget.value);
+  const handleChangeResultsPerPage = (event: ChangeEvent<HTMLInputElement>) =>
+    setResultsPerPage(event.currentTarget.value);
 
   return (
-    <form onSubmit={handleSubmit(onPunkAPIFormSubmit)}>
-      <input
-        type="number"
-        defaultValue={pageNumber}
-        {...register("pageNumberField")}
-      />
-      <input
-        type="number"
-        defaultValue={resultsPerPage}
-        {...register("resultsPerPageField")}
-      />
-      <button>Submit!</button>
-    </form>
+    <div className="form-container">
+      <form>
+        <input
+          type="number"
+          value={pageNumber}
+          onChange={handleChangePageNumber}
+        />
+        <input
+          type="number"
+          value={resultsPerPage}
+          onChange={handleChangeResultsPerPage}
+        />
+      </form>
+    </div>
   );
 };
 

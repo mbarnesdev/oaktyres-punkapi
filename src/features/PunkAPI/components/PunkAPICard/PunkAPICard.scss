@@ -1,0 +1,28 @@
+.punk-api-card-container {
+  padding: 1rem 4rem;
+  margin: 1rem 3rem;
+  border-radius: 0.85rem;
+  border: 1px solid #ececec;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__name {
+    font-size: 1.25em;
+    margin-bottom: 0.5rem;
+  }
+
+  &__tagline {
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    width: 50%;
+    height: auto;
+    align-self: auto;
+  }
+}

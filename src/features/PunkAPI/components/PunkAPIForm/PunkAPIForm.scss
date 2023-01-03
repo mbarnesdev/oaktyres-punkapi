@@ -1,0 +1,14 @@
+.form-container {
+  width: 100%;
+  margin-block: 1rem;
+  display: grid;
+  place-items: center;
+
+  & input {
+    padding: 0.5rem;
+  }
+
+  & input:not(:last-of-type) {
+    margin-right: 0.75rem;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { axiosClient } from "@/common";
 
 export const useFetch = <T = unknown>(URL: string) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,12 +13,14 @@ export const useFetch = <T = unknown>(URL: string) => {
       setIsLoading(true);
 
       try {
-        const response = await fetch(URL);
-        const data = (await response.json()) as T;
+        const response = await axiosClient.get(URL);
+        const data = (await response.data) as T;
         setData(data);
+        setError(null);
         setIsLoading(false);
       } catch (error) {
         setError(error as Error);
+        setData(null);
         setIsLoading(false);
       }
     };
