@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PunkAPIForm, PunkAPIDisplay } from "@/components";
+import { PunkAPIForm, PunkAPIDisplay } from "@/features";
 
 const PunkAPI = () => {
   const [pageNumber, setPageNumber] = useState("1");

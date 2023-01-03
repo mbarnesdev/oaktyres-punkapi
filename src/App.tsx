@@ -1,4 +1,4 @@
-import { PunkAPI } from "@/components";
+import { PunkAPI } from "@/features/PunkAPI";
 
 const App = () => <PunkAPI />;
 

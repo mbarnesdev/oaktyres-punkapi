@@ -1,5 +1,6 @@
 import { useFetch } from "@/hooks";
-import { Spinner, PunkAPICard } from "@/components";
+import { Spinner } from "@/components";
+import { PunkAPICard } from "@/features/PunkAPI";
 import type { PunkAPIResponse } from "@/types";
 import type { FunctionComponent } from "react";
 
