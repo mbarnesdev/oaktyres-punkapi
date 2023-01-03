@@ -8,7 +8,7 @@ Follow either the deployed or local instructions below to view the project.
 
 ## Local
 
-`git clone https://github.com/mbarnesdev/oaktyres-punkapi.git`
-`cd oaktyres-punkapi`
-`yarn build`
+`git clone https://github.com/mbarnesdev/oaktyres-punkapi.git`  
+`cd oaktyres-punkapi`  
+`yarn build`  
 `yarn preview`
