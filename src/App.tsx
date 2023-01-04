@@ -3,7 +3,7 @@ import './App.scss';
 
 const App = () => (
   <div className="app-container">
-    <header>Oak Tyres</header>
+    <header className="app-container__top-bar">Oak Tyres</header>
     <PunkAPI />
   </div>
 );

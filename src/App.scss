@@ -1,8 +1,12 @@
 .app-container {
   width: 100%;
-  max-height: 100vh;
+  min-height: 100vh;
 
-  & header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+
+  &__top-bar {
     width: 100%;
     height: 4rem;
 
@@ -12,5 +16,9 @@
 
     display: grid;
     place-items: center;
+  }
+
+  &__punk {
+    flex: 1;
   }
 }

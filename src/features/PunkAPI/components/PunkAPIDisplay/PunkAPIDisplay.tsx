@@ -14,9 +14,20 @@ const PunkAPIDisplay: FunctionComponent<IPunkAPIDisplayProps> = ({
 }) => {
   const { data, error, isLoading } = useFetch<PunkAPIResponse[]>(parsedURL);
 
-  if (isLoading) return <Spinner />;
+  if (isLoading)
+    return (
+      <div className="spinner">
+        <Spinner />;
+      </div>
+    );
 
-  if (error) return <p>Oops...</p>;
+  if (error)
+    return (
+      <div className="error">
+        <h1>Oops!</h1>
+        <p>Something went wrong! Please check your search parameters.</p>
+      </div>
+    );
 
   return (
     <div className="display-container">

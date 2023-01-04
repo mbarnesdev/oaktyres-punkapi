@@ -1,0 +1,13 @@
+.punk-api-container {
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+
+  &__display {
+    flex: 1;
+    width: 100%;
+  }
+}
