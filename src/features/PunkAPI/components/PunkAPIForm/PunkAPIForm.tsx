@@ -1,5 +1,5 @@
-import type { FunctionComponent, ChangeEvent } from "react";
-import "./PunkAPIForm.scss";
+import type { FunctionComponent, ChangeEvent } from 'react';
+import './PunkAPIForm.scss';
 
 interface IPunkAPIFormProps {
   pageNumber: string;

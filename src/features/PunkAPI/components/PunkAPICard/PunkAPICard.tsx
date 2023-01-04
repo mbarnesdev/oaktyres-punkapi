@@ -1,5 +1,5 @@
-import type { FunctionComponent } from "react";
-import "./PunkAPICard.scss";
+import type { FunctionComponent } from 'react';
+import './PunkAPICard.scss';
 
 interface IPunkAPICardProps {
   name: string;

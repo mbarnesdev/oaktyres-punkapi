@@ -1,10 +1,10 @@
-import { PunkAPI } from "@/features/PunkAPI";
-import "./App.scss";
+import { PunkAPI } from '@/features/PunkAPI';
+import './App.scss';
 
 const App = () => (
   <div className="app-container">
-    <header>Oaktyres Test</header>
-    <PunkAPI />;
+    <header>Oak Tyres</header>
+    <PunkAPI />
   </div>
 );
 

@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { axiosClient } from "@/common";
+import { useState, useEffect } from 'react';
+import { axiosClient } from '@/common';
 
 export const useFetch = <T = unknown>(URL: string) => {
   const [isLoading, setIsLoading] = useState(false);

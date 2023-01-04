@@ -1,14 +1,14 @@
-import { useState } from "react";
-import { PunkAPIForm, PunkAPIDisplay } from "@/features";
+import { useState } from 'react';
+import { PunkAPIForm, PunkAPIDisplay } from '@/features';
 
 const PunkAPI = () => {
-  const [pageNumber, setPageNumber] = useState("1");
-  const [resultsPerPage, setResultsPerPage] = useState("10");
+  const [pageNumber, setPageNumber] = useState('1');
+  const [resultsPerPage, setResultsPerPage] = useState('10');
 
   const parsedURL = `/beers?page=${pageNumber}&per_page=${resultsPerPage}`;
 
   return (
-    <div className="punk-api-container">
+    <>
       <PunkAPIForm
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
@@ -16,7 +16,7 @@ const PunkAPI = () => {
         setResultsPerPage={setResultsPerPage}
       />
       <PunkAPIDisplay parsedURL={parsedURL} />
-    </div>
+    </>
   );
 };
 

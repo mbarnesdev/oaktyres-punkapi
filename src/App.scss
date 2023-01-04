@@ -1,20 +1,16 @@
 .app-container {
   width: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
+  max-height: 100vh;
 
   & header {
-    height: 6.5rem;
-    background-color: #0814bc;
+    width: 100%;
+    height: 4rem;
 
-    display: inherit;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(2, 22, 191, 255);
+    color: #fff;
+    font-size: 1.35em;
 
-    font-size: 2rem;
-    color: #ffffff;
+    display: grid;
+    place-items: center;
   }
 }
