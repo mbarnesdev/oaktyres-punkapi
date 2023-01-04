@@ -22,12 +22,16 @@ const PunkAPIForm: FunctionComponent<IPunkAPIFormProps> = ({
   return (
     <div className="form-container">
       <form>
+        <label htmlFor="page-number-input">Page Number:</label>
         <input
+          id="page-number-input"
           type="number"
           value={pageNumber}
           onChange={handleChangePageNumber}
         />
+        <label htmlFor="results-per-page-input">Results Per Page:</label>
         <input
+          is="results-per-page-input"
           type="number"
           value={resultsPerPage}
           onChange={handleChangeResultsPerPage}

@@ -4,11 +4,22 @@
   display: grid;
   place-items: center;
 
-  & input {
-    padding: 0.5rem;
+  & form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    & label {
+      margin-bottom: 0.5rem;
+    }
+
+    & label:nth-of-type(even) {
+      margin-top: 0.75rem;
+    }
   }
 
-  & input:not(:last-of-type) {
-    margin-right: 0.75rem;
+  & input {
+    padding: 0.5rem;
   }
 }
